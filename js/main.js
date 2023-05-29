@@ -1,12 +1,29 @@
-import { Personaje } from './personaje.js'
+import {Personaje, Jedi, Sith, MaestroJedi} from './personaje.js'
 
-const infoPersonaje = document.querySelector('#infoPersonaje');
-const publicarPersonaje = document.querySelector('#publicarPersonaje');
+const infoYoda = document.querySelector("#infoYoda")
+const infoDarthVader = document.querySelector("#infoDarthVader")
+const divYoda = document.querySelector("#divYoda")
+const divDarthVader = document.querySelector("#divDarthVader")
 
-const guardarPersonaje = function(e){
+let yoda
+let darthVader
+
+infoYoda.addEventListener("submit", (e) => {
     e.preventDefault();
-    const personaje = new Personaje(Object.fromEntries(new FormData(e.target)))
-    publicarPersonaje.innerHTML = personaje.presentarse()
-}
+    yoda = new MaestroJedi(Object.fromEntries(new FormData(e.target)))
+    e.target.style.display = "none"
+    let publiYoda = /*HTML*/`
+    <p>${yoda.presentarse()}</p>
+    <p>${yoda.usarFuerza()}</p>
+    <p>${yoda.entrenar()}</p>
+    `
+    
+})
 
-infoPersonaje.addEventListener("submit",guardarPersonaje);
+infoDarthVader.addEventListener("submit", (e) => {
+    e.preventDefault();
+    darthVader = new Sith(Object.fromEntries(new FormData(e.target)))
+    e.target.style.display = "none"
+    
+})
+

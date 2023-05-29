@@ -13,22 +13,38 @@
         <h1>Star Wars</h1>
     </header>
     <main>
-        <div>
-            <form id="infoPersonaje">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" name="nombre" placeholder="nombre">
-                    <label for="nombre">Nombre Personaje:</label>
-                </div>
-                <div class="form-floating">
-                    <input type="number" class="form-control" id="fuerza" placeholder="fuerza">
-                    <label for="fuerza">Nivel de Fuerza:</label>
-                </div>
-                <input type="submit" value="Guardar">
-            </form>
-            <div>
-                <p id="publicarPersonaje"></p>
+        <div class="row">
+            <div class="col" id="divYoda">
+                <h3>Yoda</h3>
+                <form id="infoYoda">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="nombre" placeholder="nombre">
+                        <label for="nombre">Nombre Personaje:</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="fuerza" placeholder="fuerza">
+                        <label for="fuerza">Nivel de Fuerza:</label>
+                    </div>
+                    <input type="submit" value="Guardar" class="btn btn-success">
+                </form>
+
+            </div>
+            <div class="col" id="divDarthVader">
+                <h3>Darth Vader</h3>
+                <form id="infoDarthVader">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="nombre" placeholder="nombre">
+                        <label for="nombre">Nombre Personaje:</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="fuerza" placeholder="fuerza">
+                        <label for="fuerza">Nivel de Fuerza:</label>
+                    </div>
+                    <input type="submit" value="Guardar" class="btn btn-danger">
+                </form>
             </div>
         </div>
+
     </main>
     <footer>
 
